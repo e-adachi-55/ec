@@ -69,6 +69,8 @@
       margin: 0 auto;
     }
 
+    /*ヘッダー部分ここから*/
+
     .header {
       position: fixed;
       width: 100%;
@@ -173,4 +175,197 @@
       font-size: 12px;
       line-height: 20px;
       border-radius: 50%;
+    }
+
+    /*アイテムセクションここから*/
+
+    .c-section {
+      margin: 0 auto 60px auto;
+    }
+
+    .c-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #f2f2f2;
+    }
+
+    .c-section-title {
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .more-link {
+      position: relative;
+      color: #2996cc;
+      font-weight: bold;
+      font-size: 16px;
+      padding-right: 15px;
+    }
+
+    .more-link::after {
+      content: '';
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      width: 5px;
+      height: 5px;
+      border-top: 2px solid #2996cc;
+      border-right: 2px solid #2996cc;
+      transform: rotate(45deg) translateY(-50%);
+    }
+
+    .item-list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .item {
+      width: calc(100% / 5);
+      margin-bottom: 20px;
+    }
+
+    .item img {
+      width: 100%;
+      display: block;
+    }
+
+    .item-cap {
+      margin-bottom: 5px;
+    }
+
+    .item-info {
+      padding: 0 3px;
+    }
+
+    .item-name {
+      font-weight: bold;
+      font-size: 16px;
+    }
+    
+    .item-text {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      font-size: 13px;
+    }
+
+    .item-price {
+      margin-top: 5px;
+      font-weight: bold;
+    }
+
+    /*ピックアップここから*/
+    .thumnail-list {
+      justify-content: space-between;
+    }
+
+    .thumnail-list .item {
+      width: calc(100% / 2 - 10px);
+      padding-bottom: 20px;
+      border-bottom: 1px solid #f2f2f2;
+    }
+
+    .thumnail-list .item a {
+      display: flex;
+    }
+
+    .thumnail-list .item-cap {
+      width: 100px;
+      height: auto;
+      margin-right: 15px;
+      margin-bottom: 0;
+    }
+
+    .thumnail-list .item-info {
+      width: calc(100% - 100px - 15px);
+    }
+
+    /*ブランド部分ここから*/
+    .c-brand {
+      background-image: linear-gradient(-225deg, #2cd8d5 0%, #9891ff 56%, #ffbac3 100%);
+      padding: 50px 30px;
+      margin-bottom: 80px;
+      overflow: hidden;
+    }
+
+    .brand-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+      grid-gap: 10px 10px;
+    }
+
+    .brand-list li {
+      background: #fff;
+      border-radius: 8px;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .brand-list li a {
+      display: block;
+    }
+
+    /*フッターここから*/
+    .footer {
+      background: #333;
+    }
+
+    .footer a {
+      color: #fff;
+    }
+
+    .footer-logo {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 30px;
+      color: #fff;
+    }
+
+    .footer-inner {
+      padding: 50px 0;
+    }
+
+    .footer img {
+      width: 100%;
+    }
+
+    .sns {
+      text-align: center;
+    }
+
+    .sns li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    .sns li a {
+      display: flex;
+      align-items: center;
+    }
+
+    .sns li .sns-icon {
+      width: 25px;
+      margin-right: 10px;
+    }
+
+    .footer-link {
+      text-align: center;
+    }
+
+    .footer-link {
+      background: #000;
+      font-size: 12px;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .footer-link li {
+      display: inline-block;
+      margin: 0 10px;
     }
