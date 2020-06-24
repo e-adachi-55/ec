@@ -64,6 +64,10 @@
 
     /*共通部分ここから*/
 
+    .contents {
+      padding-top: 60px;
+    }
+
     .inner {
       width: 960px;
       margin: 0 auto;
