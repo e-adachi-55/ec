@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+/*詳細部分全体*/
+
+.item-detail {
+  margin: 30px auto 80px;
+  display: flex;
+  background: #f2f2f2;
+  padding: 30px;
+}
+
+.item-detail img {
+  width: 100%;
+  display: block;
+}
+
+/*メイン部分*/
+
+.item-detail-main {
+  width: 50%;
+  margin-right: 3%;
+}
+
+.item-detail-main .mouse-note {
+  text-align: center;
+  margin-top: 5px;
+}
+
+/*情報部分*/
+
+.item-detail-info {
+  width: 47%;
+}
+
+.item-detail-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.item-detail-brand {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.item-size {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.item-size-select {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.item-size li {
+  border-radius: 5px;
+  background: #fff;
+  display: inline-block;
+  padding: 5px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid #e5e5e5;
+  cursor: pointer;
+  margin-bottom: 3px;
+}
+
+.item-size li.is-active {
+  background: #333;
+  color: #fff;
+}
+
+.item-detail-price {
+  font-size: 30px;
+  font-weight: bold;
+}
+
