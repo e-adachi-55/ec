@@ -92,3 +92,22 @@
 .review li.is-active {
   color: #ffc107;
 }
+
+/*レスポンシブはここから*/
+@media screen and (max-width:768px) {
+  .item-detail {
+    display: block;
+    padding: 20px;
+    margin: 0 auto 80px;
+  }
+
+  .item-detail-main {
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .item-detail-info {
+    width: auto;
+  }
+}

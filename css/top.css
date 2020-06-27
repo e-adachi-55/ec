@@ -5,3 +5,13 @@
   margin-bottom: 60px;
 }
 
+@media screen and (max-width:768px) {
+  /* スマホ共通ここから*/
+  .top-slider img {
+    width: 100%;
+  }
+
+  .top-slide .inner {
+    margin: 0 0;
+  }
+}

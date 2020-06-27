@@ -82,3 +82,49 @@
   margin-bottom: 30px;
 }
 
+/*レスポンシブはここから*/
+@media screen and (max-width: 768px) {
+  .contents {
+    margin-top: 20px;
+  }
+  
+  .sidebar {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 30px;
+    width: auto;
+  }
+
+  .list-area .c-section {
+    width: auto;
+    float: none;
+  } 
+
+  .sidebar-inner {
+    margin-bottom: 20px;
+  }
+
+  .sidebar-title {
+    position: relative;
+    font-size: 16px;
+  }
+
+  .sidebar-title::after {
+    content: "＋";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 24px;
+  }
+
+  .sidebar-body {
+    display: none;
+  }
+
+  .inner .list-area {
+    margin: 0 10px;
+  }
+
+
+}
