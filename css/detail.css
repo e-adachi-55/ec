@@ -77,6 +77,28 @@
   font-weight: bold;
 }
 
+[data-accordion="trigger"] {
+  margin-top: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+[data-accordion="trigger"]::before {
+  content: '▼';
+  display: inline-block;
+  margin-right:  6px;
+}
+
+[data-accordion="trigger"].is-active::before {
+  content: '−';
+}
+
+[data-accordion="target"] {
+  display: none;
+  margin-top: 18px;
+}
+
 /*レビューをする*/
 .review {
   display: flex;
