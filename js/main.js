@@ -22,6 +22,31 @@ $(function() {
 			}
 		]
 	});
+
+	//ハンバーガーメニュー
+	$('.menu-trigger').on('click', function() {
+		$(this).toggleClass('is-active');
+		$('.header-links').toggleClass('is-active');
+	});
+
+	//サイズの選択
+	$('.item-size-list li').on('click', function() {
+		const select_size = $(this).text();
+		
+		$(this).addClass('is-active');
+		$(this).siblings('li').removeClass('is-active');
+		$('.item-size-select span').text(select_size);
+	});
+});
+
+$(window).on("scroll", function() {
+	
+	//フェードイン
+	$('[data-fadeIn]').each(function(index, el) {
+		if($(window).scrollTop() > ( $(el).offset().top - $(window).height() / 2) ) {
+			$(el).addClass('is-over');
+		}
+	});
 });
 
 $(window).on("load", function() {
