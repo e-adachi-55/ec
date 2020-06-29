@@ -1,5 +1,32 @@
 $(function() {
 
+	const page_type = $('.contents').attr('id');
+	const categorys = ['men', 'woman', 'kids'];
+
+	let more_count = {
+		'brand':3,
+		'items':10
+	}
+
+	function moreControl(el, num) {
+		const more_type = $(el).attr('data-more-btn');
+		const target_list = $(`[data-more-list="${more_type}"]`);
+		const max_count = target_list.find('li').length;
+		more_count[more_type] += num;
+		target_list.find(`li:lt(${more_count[more_type]})`).fadeIn();
+		if( more_count[more_type] >= max_count ){
+			$(el).hide();
+		}
+	}
+
+	$('[data-more-btn="brand"]').on('click',function(){
+		moreControl($(this), 3);
+	});
+
+	$('[data-more-btn="items"]').on('click',function(){
+		moreControl($(this), 10);
+	});
+
 	//オブジェクトをhtmlに変換する
 	//返り値:html
 	function createDom(items) {
@@ -20,20 +47,35 @@ $(function() {
 		return html_template;
 	}
 
-	function getItemList(key) {
+	function getItemList(key, value = null) {
 		const items = item_data.filter(function(item, index) {
 			switch(key) {
+				case 'category':
+					return item[key] == value
+					break;
 				case 'new':
-				return item['new']
-				break;
+					return item['new']
+					break;	
 			}
 		});
 		return items;
 	}
 
-	let news = getItemList('new');
-	let new_lis = createDom(news);
-	$('[data-item-list="new"]').append(new_lis);
+	function pickUpShuffle(item_data) {
+    let items = [];
+    let rand_check = [];
+    for( let i = 0; i < 6; i++ ){
+        let j = Math.floor(Math.random() * item_data.length + 1);
+        if( rand_check.indexOf(j) !== -1 ){
+            i--;
+            continue;
+        }else{
+            rand_check.push(j);
+            items.push(item_data[j]);
+        }
+    }
+    return items;
+}
 
 	//TOPスライダー
 	$('.top-slider').slick({
@@ -98,9 +140,32 @@ $(function() {
 		$(this).next('.sidebar-body').stop().toggle();
 	});
 
+	if( page_type == 'page-index') {
+		let item_list_new = getItemList('new');
+		$('[data-item-list="new"]').append(createDom(item_list_new));
+		categorys.forEach(function(category){
+			let item_list_category = getItemList('category', category);
+			item_list_category = createDom(item_list_category);
+			$(`[data-item-list="${category}"]`).append(item_list_category);
+		})
+	}
+
+	let item_list_pickup = createDom(pickUpShuffle(item_data));
+	$('[data-item-list="pickup"]').append(item_list_pickup);
+
 });
 
 $(window).on("scroll", function() {
+
+	//ころりん
+	if($(window).scrollTop() > 300) {
+		$('.circle-banner').addClass('is-over');
+	} else {
+		$('.circle-banner').removeClass('is-over');
+	}
+	if($(window).scrollTop() > $('.footer').offset().top - 1000) {
+		$('.circle-banner').removeClass('is-over');
+	}
 	
 	//フェードイン
 	$('[data-fadeIn]').each(function(index, el) {

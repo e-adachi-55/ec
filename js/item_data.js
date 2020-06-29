@@ -15,7 +15,7 @@ const item_data = [
 		'price':1800,
 		'text':'テーラーホワイト（tailor）は仕立屋という意味があり、キレイに仕立てられたメンズの上着をテーラードジャケット',
 		'brand':'AAA',
-		'new':true,
+		'new':false,
 	},
 	{
 		'id':3,
