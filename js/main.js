@@ -27,6 +27,10 @@ $(function() {
 		moreControl($(this), 10);
 	});
 
+	if( page_type == 'page-detail' ) {
+		$('[data-zoom-image]').elevateZoom();
+	}
+
 	//オブジェクトをhtmlに変換する
 	//返り値:html
 	function createDom(items) {
@@ -152,6 +156,8 @@ $(function() {
 
 	let item_list_pickup = createDom(pickUpShuffle(item_data));
 	$('[data-item-list="pickup"]').append(item_list_pickup);
+
+
 
 });
 
