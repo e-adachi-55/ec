@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-@charset "UTF-8";
-
 .btn {
   display: block;
   height: 60px;
@@ -37,9 +35,18 @@
   background: #2996cc;
 }
 
+.btn--cart.is-storage {
+  background: #ccc;
+}
+
 .btn--fav {
   background: #fff;
   color: #333;
+}
+
+.btn--buy {
+  background: #e73656;
+  color: #fff;
 }
 
 .btn--cart span::before {

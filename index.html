@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/top.css">
+	<link rel="stylesheet" href="css/btn.css">
 </head>
 <body>
 	<header class="header">
@@ -27,7 +28,7 @@
 					</a>
 				</div>
 			</div>
-			<form action="list.html">
+			<form action="list.html" autocomplete="off" method="GET">
 				<button type="submit" class="word-submit"></button>
 				<input type="text" class="word-search" placeholder="何かお探しですか？" name="freeword">
 			</form>
@@ -200,6 +201,19 @@
 			<li><a href="">© NINCO CO., LTD.</a></li>
 		</ul>
 	</footer>
+
+	<div class="modal-wrap">
+		<div class="modal-inner">
+			<div class="modal-close">✕</div>
+			<h3 class="modal-title">ショッピングカート(<span class="cart-total-num">2</span>点)</h3>
+			<ul id="cart-list" class="item-list thumbnail-list">
+			</ul>
+			<div class="cart-total">
+				合計金額：<span class="cart-total-price">1000円</span>
+			</div>
+			<a href="" class="btn btn--buy">購入する</a>
+		</div>
+	</div>
 
 	<div class="circle-banner"><img src="img/circle_banner.png" alt=""></div>
 
